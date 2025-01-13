@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Memory Lane</title>
+    <link rel="stylesheet" href="./public/styles/styles.css">
+    <style>
+        .album-container {
+            display: none;
+        }
+
+        #password-prompt {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Special Moments</h1>
+    </header>
+
+    <div id="password-prompt">
+        <p>Please enter the password to view the photo album:</p>
+    </div>
+    <div class="album-container">
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo1.jpg" alt="Memory 1" onclick="openLightbox(this.src)">
+                <div class="date">November 17, 2019</div>
+            </div>
+            <div class="event" id="event-1">
+                <h3>The Instagram Glitch!</h3>
+                <p>yes, this was the instagram glitch that started everything.</p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo2.jpg" alt="Memory 2" onclick="openLightbox(this.src)">
+                <div class="date">March 11, 2020</div>
+            </div>
+            <div class="event" id="event-2">
+                <h3>Holi 2020</h3>
+                <p>Pata nahi kaise kyu, but mile they.</p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo3.jpg" alt="Memory 3" onclick="openLightbox(this.src)">
+                <div class="date">October 25, 2020</div>
+            </div>
+            <div class="event" id="event-3">
+                <h3>Puja 2020</h3>
+                <p>you made me so happy even when I was feeling so low.</p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo4.jpg" alt="Memory 4" onclick="openLightbox(this.src)">
+                <div class="date">May 6, 2021</div>
+            </div>
+            <div class="event" id="event-4">
+                <h3>Sparks!</h3>
+                <p>you held my hands for the very first time</p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo5.jpg" alt="Memory 5" onclick="openLightbox(this.src)">
+                <div class="date">July 29, 2021</div>
+            </div>
+            <div class="event" id="event-5">
+                <h3>The beginning</h3>
+                <p>you asked me if I still loved you, I replied with I couldn't think of the day I won't</p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo6.jpg" alt="Memory 6" onclick="openLightbox(this.src)">
+                <div class="date">September 20, 2021</div>
+            </div>
+            <div class="event" id="event-6">
+                <h3>Moments before disaster!</h3>
+                <p>We met for the very first time after going into a relationship, let's not go into the disaster part.
+                </p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo7.jpg" alt="Memory 7" onclick="openLightbox(this.src)">
+                <div class="date">November 17, 2021</div>
+            </div>
+            <div class="event" id="event-7">
+                <h3>Our First Kiss!</h3>
+                <p>November has always been special isn't it?</p>
+            </div>
+        </div>
+
+        <div class="sine-wave-string">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" height="200" width="100%">
+                <path d="M 0 150 Q 250 50 500 150 T 1000 150" stroke="white" fill="transparent" />
+            </svg>
+        </div>
+
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo8.jpg" alt="Memory 7" onclick="openLightbox(this.src)">
+                <div class="date">June 28, 2024</div>
+            </div>
+            <div class="event" id="event-7">
+                <h3>Reunion!</h3>
+                <p>words can't describe how these last 2 years felt like, I'm so happy we found each other again.</p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo9.jpg" alt="Memory 7" onclick="openLightbox(this.src)">
+                <div class="date">August 17, 2024</div>
+            </div>
+            <div class="event" id="event-7">
+                <h3>3 years!</h3>
+                <p>I've met you after 3 years, and in a way I could never forget.</p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo10.jpg" alt="Memory 7" onclick="openLightbox(this.src)">
+                <div class="date">August 30, 2025</div>
+            </div>
+            <div class="event" id="event-7">
+                <h3>Family Time!</h3>
+                <p>I met your cousins, they're cool btw.</p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo11.jpg" alt="Memory 7" onclick="openLightbox(this.src)">
+                <div class="date">October 2, 2024</div>
+            </div>
+            <div class="event" id="event-7">
+                <h3>The October!</h3>
+                <p>October challenged us, I’ll do everything to never let you feel something like that again. I love
+                    you with all my heart and always will </p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo12.jpg" alt="Memory 7" onclick="openLightbox(this.src)">
+                <div class="date">November 07, 2024</div>
+            </div>
+            <div class="event" id="event-7">
+                <h3>November heat!</h3>
+                <p>It was the best of times, perfect. I know you feel the same :) you made me feel so loved that I cried
+                    in your arms while we were about to leave. you are home to me and I wish you always stay by my side
+                    honey. I feel stronger in your arms </p>
+            </div>
+        </div>
+
+        <div class="album-entry">
+            <div class="photo">
+                <img src="./public/images/photo13.jpg" alt="Memory 7" onclick="openLightbox(this.src)">
+                <div class="date">January 06, 2025</div>
+            </div>
+            <div class="event" id="event-7">
+                <h3>Happy New Year! </h3>
+                <p>what could be a better start to this year? I came to your town for the very first time. </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./scripts.js" charset="UTF-8"></script>
+</body>
+</html>

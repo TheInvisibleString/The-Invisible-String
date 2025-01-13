@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111d13; /* Dark background for the body */
+  padding: 20px;
+  color: white; /* Set the text color to white */
+}
+
+/* Header styling */
+header {
+  background-color: #283618; /* Dark background for the header */
+  color: white; /* Text color */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Space below the header */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+header h1 {
+  font-size: 2.5em; /* Large font size for the heading */
+  margin: 0; /* Remove default margin */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.album-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.album-entry {
+  display: flex;
+  align-items: center;
+  background-color: #283618; /* Background for album entry */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.photo {
+  position: relative;
+  flex: 1;
+  background-color: black; /* Keep the photo area black */
+  padding: 0; /* Remove any padding to eliminate the gaps */
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the image doesn't overflow outside the container */
+}
+
+.photo img {
+  width: 100%; /* Ensures the image fills the width of the container */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes the bottom gap caused by inline elements */
+  object-fit: cover; /* Ensures the image covers the full area without distorting */
+  border-radius: 8px; /* Keeps the rounded corners */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+.date {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  background-color: black; /* Background of the date */
+  color: beige; /* Text color of the date */
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.event {
+  flex: 2;
+  padding-left: 20px;
+  margin-left: 8%;
+}
+
+.event h3 {
+  color: white; /* Event title color */
+  margin-bottom: 10px;
+}
+
+.event p {
+  color: white; /* Event description color */
+  line-height: 1.6;
+}
+
+/* Show/Hide button styling */
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Lightbox styling */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .album-entry {
+    flex-direction: column;
+  }
+
+  .event {
+    padding-left: 0;
+    padding-top: 10px;
+    margin-left: 0%;
+    text-align: center;
+  }
+}
+
+/* Sine wave string container styling */
+.sine-wave-string {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 40px 0; */
+}
+
+.sine-wave-string svg {
+  stroke-width: 2px; /* Adjust the thickness */
+  stroke: white; /* Set color of the wave */
+  fill: none;
+}
