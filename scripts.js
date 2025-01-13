@@ -28,7 +28,7 @@ function closeLightbox() {
 // Password protection function
 function checkPassword() {
   const correctPassword = "17"; // Set your password here
-  const userPassword = prompt("Enter the password:");
+  let userPassword = prompt("Enter the password:");
 
   // Debugging: Log the entered password
   console.log("User entered password:", userPassword);
@@ -37,14 +37,17 @@ function checkPassword() {
     document.querySelector(".album-container").style.display = "flex";
     document.getElementById("password-prompt").style.display = "none";
   } else {
-    alert("Incorrect password! Redirecting...");
-    window.location.reload(); // Redirect to another page on incorrect password
+    alert("Incorrect password! Please try again.");
+    checkPassword(); // Ask for password again without reloading
   }
 }
 
-// Call password function when the page loads
-window.onload = function () {
+// Call password function when the DOM content is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Hide the album container initially
   document.querySelector(".album-container").style.display = "none";
   document.getElementById("password-prompt").style.display = "block";
+
+  // Immediately check password once the DOM is ready
   checkPassword();
-};
+});
